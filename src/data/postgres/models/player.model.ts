@@ -1,5 +1,3 @@
-
-
 import { BaseEntity, Column, CreateDateColumn, Entity, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
 import { User } from './user.model';
 import { Construction } from './constructions.model';

@@ -1,8 +1,3 @@
-
-
-
-
-
 export class AddQuestPlayerDTO {
   private constructor(
     public readonly questId: number,

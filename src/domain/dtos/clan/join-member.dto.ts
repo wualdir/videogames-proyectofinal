@@ -1,7 +1,3 @@
-
-
-
-
 export class JoinMember {
   private constructor(
     public readonly senderMemberId: number,

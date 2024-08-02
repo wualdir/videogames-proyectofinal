@@ -1,5 +1,3 @@
-
-
 export class CreateUserDTO {
   private constructor(
     public readonly username: string,

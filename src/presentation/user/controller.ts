@@ -1,5 +1,3 @@
-
-
 import { Request, Response } from 'express';
 import { CreateUserDTO, CustomError, LoginUserDTO } from '../../domain';
 import { UserService } from '../services/user.service';

@@ -1,6 +1,3 @@
-
-
-
 import { BaseEntity, Column, CreateDateColumn, Entity, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
 import { Player } from './player.model';
 import { Clan } from './clans.model';

@@ -1,7 +1,3 @@
-
-
-
-
 export class CreatePlayerDTO {
   private constructor(
     public readonly name: string

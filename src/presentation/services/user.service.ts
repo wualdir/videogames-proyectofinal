@@ -1,6 +1,5 @@
-
-import { byCriptAdapter } from '../../config/bcrypt.adapter';
-import { jwtAdapter } from '../../config/jwt.adapter';
+import { bcryptAdapter } from '../../config/bcrypt.adapter';
+import { JwtAdapter } from '../../config/jwt.adapter';
 import { User } from '../../data';
 import { CreateUserDTO, CustomError, LoginUserDTO } from '../../domain';
 
@@ -32,10 +31,10 @@ export class UserService {
     });
     if (!user) throw CustomError.unAuthorized("Invalid email or password")
 
-    const isMatching = byCriptAdapter.compare(password, user.password)
+    const isMatching = bcryptAdapter.compare(password, user.password)
     if (!isMatching) throw CustomError.unAuthorized("Invalid email or password")
 
-    const token = await jwtAdapter.generateToken({ id: user.id })
+    const token = await JwtAdapter.generateToken({ id: user.id })
     if (!token) throw CustomError.internalServer("Error while creating JWT");
 
     return {
@@ -70,7 +69,7 @@ export class UserService {
     const user = new User();
     user.email = email;
     user.username = username;
-    user.password = byCriptAdapter.hash(createUserDTO.password);
+    user.password = bcryptAdapter.hash(createUserDTO.password);
 
     try {
       return await user.save()

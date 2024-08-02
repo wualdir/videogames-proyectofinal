@@ -1,5 +1,3 @@
-
-
 export class LoginUserDTO {
   private constructor(
     public readonly username: string | undefined,

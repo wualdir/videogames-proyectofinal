@@ -1,4 +1,3 @@
-
 import { BaseEntity, Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
 import { Quest_player } from './questPlayer.model';
 

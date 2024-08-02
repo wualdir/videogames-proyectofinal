@@ -1,6 +1,3 @@
-
-
-
 import { BaseEntity, Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
 import { ClanMember } from './clanMember.model';
 
